@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hoja de Vida</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+/* SECCIÓN SUPERIOR */
+.card {
+    display: flex;
+    align-items: center; /* CENTRA VERTICALMENTE */
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+/* COLUMNA IZQUIERDA (FOTO + EDAD) */
+.foto-columna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+}
+
+.foto-columna img {
+    width: 220px;
+    border-radius: 10px;
+}
+
+.edad {
+    margin-top: 15;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* COLUMNA DERECHA (INFORMACIÓN) */
+.info {
+    flex: 1;
+}
+
+.info h1 {
+    margin-bottom: 20px; /* espacio entre nombre y título */
+}
+
+.info h3 {
+    margin-top: 0; /* elimina margen superior para que no sume espacio extra */
+    color: #333;
+}
+
+.info p {
+    text-align: justify;
+}
+
+/* SECCIÓN INFERIOR CON GRID */
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.bloque {
+    margin-bottom: 25px;
+}
+
+h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+</style>
+
+</head>
+<body>
+
+<!-- PARTE SUPERIOR -->
+<div class="card">
+
+    <div class="foto-columna">
+        <img src="imagen.jpg" alt="Foto de Daniel David Gómez Riobó" />
+        <div class="edad" style="margin-top:20px; text-align:center;"> Edad - 19 Años
+</div>
+
+    </div>
+
+    <div class="info">
+        <h1>DANIEL DAVID GÓMEZ RIOBÓ</h1>
+        <h3>Técnico Laboral en Plataformas Tecnológicas y Aplicaciones</h3>
+
+        <p>
+        <strong>Introducción:</strong> Actualmente me encuentro cursando un Técnico Laboral por Competencias en Plataformas Tecnológicas y Aplicaciones en el Instituto I3 de Bogotá.
+        Realizo mis prácticas en ACH Colombia S.A., en la Gerencia de Integraciones Tecnológicas, donde apoyo procesos relacionados con la documentación técnica, la elaboración de instructivos detallados paso a paso y la actualización de portales corporativos como GoAnywhere y OpenShift.
+        Me caracterizo por ser una persona responsable, disciplinada y comprometida con el aprendizaje continuo. Tengo una clara orientación hacia el crecimiento profesional en el área tecnológica, con interés en la innovación y la gestión de infraestructura empresarial.
+        </p>
+    </div>
+
+</div>
+
+<!-- PARTE INFERIOR -->
+<div class="contenedor">
+
+    <div class="bloque">
+        <h2>HABILIDADES</h2>
+        <ul>
+            <li>Elaboración de documentación técnica profesional.</li>
+            <li>Creación de procedimientos e instructivos detallados.</li>
+            <li>Actualización y mantenimiento de portales corporativos.</li>
+            <li>Asistencia técnica en software y hardware.</li>
+            <li>Trabajo en equipo y comunicación asertiva.</li>
+            <li>Innovación y creatividad en proyectos digitales.</li>
+            <li>Interés en el monitoreo y administración de bases de datos empresariales.</li>
+        </ul>
+    </div>
+
+    <div class="bloque">
+        <h2>INFORMACIÓN ACADÉMICA</h2>
+        <p>
+            Técnico Laboral en Plataformas Tecnológicas y Aplicaciones<br />
+            Instituto I3 – Bogotá<br />
+            Actualmente en formación
+        </p>
+        <p>
+            Bachiller Académico<br />
+            Institución Educativa Ciudad Verde<br />
+            Soacha, Cundinamarca – 2023
+        </p>
+    </div>
+
+    <div class="bloque">
+        <h2>FORMACIÓN COMPLEMENTARIA</h2>
+        <ul>
+            <li>Curso de Herramientas Digitales (SENA)</li>
+            <li>Curso de Competencias Básicas en Excel (SENA)</li>
+        </ul>
+    </div>
+
+    <div class="bloque">
+        <h2>CONTACTO</h2>
+        <p>Correo: danielgomez@gmail.com</p>
+        <p>Teléfono: 3204951400</p>
+    </div>
+
+</div>
+
+</body>
+</html>
+
