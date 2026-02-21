@@ -1,80 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tarjeta de Presentación</title>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
-}
-
-/* SECCIÓN SUPERIOR */
-.card {
-    display: flex;
-    align-items: center; /* CENTRA VERTICALMENTE */
-    gap: 60px;
-    margin-bottom: 40px;
-}
-
-/* COLUMNA IZQUIERDA (FOTO + EDAD) */
-.foto-columna {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 220px;
-}
-
-.foto-columna img {
-    width: 220px;
-    border-radius: 10px;
-}
-
-.edad {
-    margin-top: 15;
-    text-align: center;
-    font-weight: bold;
-}
-
-/* COLUMNA DERECHA (INFORMACIÓN) */
-.info {
-    flex: 1;
-}
-
-.info h1 {
-    margin-bottom: 20px; /* espacio entre nombre y título */
-}
-
-.info h3 {
-    margin-top: 0; /* elimina margen superior para que no sume espacio extra */
-    color: #333;
-}
-
-.info p {
-    text-align: justify;
-}
-
-/* SECCIÓN INFERIOR CON GRID */
-.contenedor {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    margin-top: 40px;
-}
-
-.bloque {
-    margin-bottom: 25px;
-}
-
-h2 {
-    border-bottom: 2px solid black;
-    padding-bottom: 5px;
-    margin-top: 0;
-}
-</style>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tarjeta de Presentación</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -89,11 +19,11 @@ h2 {
     </div>
 
     <div class="info">
-        <h1>DANIEL DAVID GÓMEZ RIOBÓ</h1>
-        <h3>Técnico Laboral en Plataformas Tecnológicas y Aplicaciones</h3>
+        <h1 style="text-align:center;">DANIEL DAVID GÓMEZ RIOBÓ</h1>
+        <h3 style="text-align:center;">TÉCNICO EN PLATAFORMAS TECNOLÓGICAS Y APLICACIONES</h3>
 
         <p>
-        <strong>Introducción:</strong> Actualmente me encuentro cursando un Técnico Laboral por Competencias en Plataformas Tecnológicas y Aplicaciones en el Instituto I3 de Bogotá.
+        <br> Actualmente me encuentro cursando un Técnico Laboral por Competencias en Plataformas Tecnológicas y Aplicaciones en el Instituto I3 de Bogotá.
         Realizo mis prácticas en ACH Colombia S.A., en la Gerencia de Integraciones Tecnológicas, donde apoyo procesos relacionados con la documentación técnica, la elaboración de instructivos detallados paso a paso y la actualización de portales corporativos como GoAnywhere y OpenShift.
         Me caracterizo por ser una persona responsable, disciplinada y comprometida con el aprendizaje continuo. Tengo una clara orientación hacia el crecimiento profesional en el área tecnológica, con interés en la innovación y la gestión de infraestructura empresarial.
         </p>
@@ -140,13 +70,31 @@ h2 {
     </div>
 
     <div class="bloque">
-        <h2>CONTACTO</h2>
-        <p>Correo: danielgomez@gmail.com</p>
-        <p>Teléfono: 3204951400</p>
+        <h2>OBJETIVO PROFESIONAL</h2>
+            <p style="text-align: justify;">Mi propósito es graduarme como técnico en plataformas y aplicaciones para construir una carrera en desarrollo e infraestructura tecnológica. 
+            quiero crecer como profesional aportando innovación, disciplina y creatividad, alcanzando mis sueños y contribuyendo al progreso de las organizaciones.</p>
     </div>
-
 </div>
 
-</body>
-</html>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-icons">
+    <!-- Ícono GitHub con link -->
+    <a href="https://github.com/Daviitd" target="_blank">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" viewBox="0 0 24 24">
+        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.7 2.1 2.9 1.5.1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.6 11.6 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+      </svg>
+    </a>
 
+    <!-- Ícono Mail con copiar al portapapeles -->
+    <a href="#" onclick="navigator.clipboard.writeText('danielgomez01087@gmail.com'); alert('Correo copiado al portapapeles'); return false;">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" viewBox="0 0 24 24">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+      </svg>
+    </a>
+  </div>
+  <p class="footer-text">© 2026 - Daniel David Gómez Riobó</p>
+</footer>
+
+</body> 
+</html>
