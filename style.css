@@ -1,0 +1,392 @@
+/* ------------------------------
+    ESTILOS GENERALES
+   ------------------------------ */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 40px;
+    background: linear-gradient(180deg, #000000, #111111); /* Fondo degradado negro */
+    color: #ffffff;
+    transition: background 0.5s ease;
+}
+
+/* ------------------------------
+    SECCIÓN SUPERIOR (CARD PRINCIPAL)
+   ------------------------------ */
+.card {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(17,17,17,0.95); /* Negro con transparencia */
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.9);
+    border: none;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------
+    FOTO + EDAD
+   ------------------------------ */
+.foto-columna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.foto-columna img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    background: linear-gradient(135deg, #000000, #111111);
+    padding: 5px;
+    transition: transform 0.6s ease, filter 0.6s ease, opacity 0.6s ease;
+    mix-blend-mode: lighten;
+}
+
+.foto-columna img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2) contrast(1.1) saturate(1.1);
+    opacity: 0.95;
+}
+
+.edad {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* ------------------------------
+    INFORMACIÓN DERECHA
+   ------------------------------ */
+.info {
+    flex: 1;
+}
+
+.info h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 2.2rem;
+    border-bottom: 3px solid #0078d7;
+    padding-bottom: 8px;
+    animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-60px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.info h2 {
+    margin-top: 0;
+    color: #aaaaaa;
+    font-size: 1.3rem;
+}
+
+.info p {
+    text-align: justify;
+    line-height: 1.7;
+    transition: color 0.3s ease;
+}
+
+.info p:hover {
+    color: #ffffff;
+}
+
+/* ------------------------------
+    SECCIÓN INFERIOR (GRID)
+   ------------------------------ */
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.bloque {
+    background: rgba(17,17,17,0.9);
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bloque:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px #0078d7;
+}
+
+h2 {
+    color: #ffffff;
+    border-bottom: 2px solid #0078d7;
+    padding-bottom: 6px;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ------------------------------
+    LISTAS Y PÁRRAFOS
+   ------------------------------ */
+ul {
+    color: #ffffff;
+    padding-left: 20px;
+}
+
+ul li {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+ul li:hover {
+    color: #0078d7;
+    transform: translateX(8px);
+}
+
+/* ------------------------------
+    ENLACES DE CONTACTO
+   ------------------------------ */
+a {
+    color: #0078d7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #0078d7;
+}
+
+/* ------------------------------
+    BOTONES EXTRA
+   ------------------------------ */
+button {
+    background: transparent;
+    border: 2px solid #0078d7;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #0078d7;
+    color: #000000;
+    box-shadow: 0 0 20px #0078d7;
+    transform: scale(1.08);
+}
+
+/* ------------------------------
+    FOOTER CON ÍCONOS
+   ------------------------------ */
+.footer {
+    background: linear-gradient(180deg, #000000, #111111);
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 2px solid #0078d7;
+    animation: fadeInFooter 1.5s ease;
+}
+
+@keyframes fadeInFooter {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.footer-icons {
+    margin-bottom: 15px;
+}
+
+.footer-icons .icon {
+    margin: 0 15px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    cursor: pointer;
+    fill: #ffffff; /* color de los SVG */
+    width: 40px;
+    height: 40px;
+}
+
+.footer-icons .icon:hover {
+    transform: scale(1.2) rotate(5deg);
+    filter: drop-shadow(0 0 10px #0078d7);
+}
+
+.footer-text {
+    color: #888888;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-text:hover {
+    color: #ffffff;
+}
+
+
+/* ------------------------------
+    RESPONSIVIDAD
+   ------------------------------ */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .foto-columna img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    a, button {
+        display: block;
+        text-align: center;
+        margin: 12px auto;
+        width: 100%;
+    }
+
+    .foto-columna img {
+        max-width: 100%;
+    }
+
+    .footer-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 40px;
+    background: radial-gradient(circle at top left, #0a0f1f, #000000); /* azul oscuro a negro */
+    color: #ffffff;
+}
+
+/* Efecto de capa borrosa brillante */
+.fondo-brillante {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.08); /* blanco suave */
+    filter: blur(120px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* --- Footer compacto con halo animado --- */
+.footer {
+    background: rgba(0,0,0,0.85); /* negro translúcido */
+    padding: 15px 0; /* más pequeño */
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #0078d7;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Halo borroso animado detrás de los íconos */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle, rgba(0,120,215,0.4), rgba(255,255,255,0.05));
+    filter: blur(70px);
+    border-radius: 50%;
+    z-index: 0;
+    animation: haloPulse 6s ease-in-out infinite;
+}
+
+@keyframes haloPulse {
+    0% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+    50% { opacity: 1; transform: translateX(-50%) scale(1.2); }
+    100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+}
+
+/* Texto más fino */
+.footer-text {
+    color: #aaaaaa;
+    font-size: 0.75rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Foto  */
+.footer-text:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #0078d7;
+}
+
+/* --- Tarjeta más compacta --- */
+.card {
+    gap: 25px; /* menos espacio entre foto e info */
+    padding: 18px; /* más pequeño */
+    margin-bottom: 25px;
+}
+
+.foto-columna img {
+    max-width: 280px; /* más pequeña y compacta */
+}
+
+.info h1 {
+    margin-bottom: 12px; /* menos separación */
+    font-size: 1.8rem; /* más compacto */
+}
+
+.info h2 {
+    margin-top: 4px;
+    font-size: 1.1rem;
+}
+
+.info p {
+    margin-top: 8px;
+    line-height: 1.5; /* más pegado */
+    font-size: 0.95rem;
+}
+
+/* --- Nombre centrado --- */
+.info h1 {
+    font-size: 2.2rem;       /* mantiene tamaño grande */
+    tex
+}
